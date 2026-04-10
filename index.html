@@ -53,7 +53,7 @@
             <h3>📍 DATOS COMPLETOS</h3>
             <ul>
                 <li><strong>CUE:</strong> 380082600</li>
-                <li><strong>📍 Coordenadas:</strong> -21.97871, -65.89599</li>
+                <li><strong>📍 Coordenadas:</strong> -21.980640, -65.898425</li>
                 <li><strong>📞 Teléfono:</strong> 388-4914677</li>
                 <li><strong>✉️ Email:</strong> <a href="mailto:sisog20@gmail.com / ricardo_cardozoar@hotmail.com">sisog20@gmail.com / ricardo_cardozoar@hotmail.com</a></li>
                 <li><strong>📍 Dirección:</strong> 9 DE JULIO, 0</li>
@@ -76,7 +76,7 @@
             </div>
            
             <h2>🎛️ Controles</h2>
-            <button onclick="map.setView([-21.97871,-65.89599], 17)">📍 Centrar Colegio</button>
+            <button onclick="map.setView([-21.980640,-65.898425], 17)">📍 Centrar Colegio</button>
             <button onclick="map.locate({setView: true, maxZoom: 17})">📱 Mi Ubicación</button>
              
 
@@ -106,17 +106,17 @@
             'terrain': L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {maxZoom: 18})
         };
        
-        map = L.map('map', {layers: [baseMaps.osm], center: [-21.97871, -65.89599], zoom: 17});  
+        map = L.map('map', {layers: [baseMaps.osm], center: [-21.980640, -65.898425], zoom: 17});  
         currentBaseLayer = baseMaps.osm;
        
         // Marcador escuela ✅
-        L.marker([-21.97871, -65.89599]).addTo(map).bindPopup(`
+        L.marker([-21.980640, -65.89599]).addTo(map).bindPopup(`
             <div style="text-align:center; min-width:280px; font-family:Arial;">
                 <h3 style="color:#2c3e50;">🏫 COLEGIO SECUNDARIO DE ARTES N 30</h3>
                 <p><strong>CUE:</strong> 380082600 | <strong>📞:</strong> 3885 - 485001</p>
                 <p><strong>📍:</strong> 9 DE JULIO 0, CENTRO, CASIRA</p>
                 <p><strong>✉️:</strong> <a href="mailto:sisog20@gmail.com / ricardo_cardozoar@hotmail.com">sisog20@gmail.com / ricardo_cardozoar@hotmail.com</a></p>
-                <button onclick="window.open('https://google.com/maps?q=-21.97871,-65.89599')" 
+                <button onclick="window.open('https://google.com/maps?q=-21.980640,-65.898425')" 
                         style="background:#AD2203;color:white;border:none;padding:10px 20px;border-radius:6px;cursor:pointer;width:100%;margin-top:10px;">
                     🚗 Ver en Google Maps
                 </button>
@@ -124,7 +124,7 @@
         `);
 
         // Círculo 500m ✅
-        L.circle([-21.97871, -65.89599], {
+        L.circle([-21.980640, -65.898425], {
             color: '#3498db', fillColor: '#F52749', fillOpacity: 0.3, radius: 500
         }).addTo(map);
 
@@ -145,7 +145,7 @@
             L.marker(e.latlng).addTo(map).bindPopup(
                 `✅ ¡Estás aquí!<br>
                 📍 ${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}<br>
-                📏 ${Math.round(map.distance(e.latlng, [-21.97871, -65.89599]))} m del colegio`
+                📏 ${Math.round(map.distance(e.latlng, [-21.980640, -65.898425]))} m del colegio`
             ).openPopup();
         });
         map.on('locationerror', () => alert('❌ GPS bloqueado. Activa ubicación.'));
